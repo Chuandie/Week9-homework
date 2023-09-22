@@ -18,30 +18,22 @@
                 "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
             },
             "projection": { "type": "equalEarth" },
+            "selection": {
+                "chooseYear": {
+                    "type": "single",
+                    "fields": ["Year"],
+                    "init": { "Year": 2018 },
+                    "bind": {
+                        "Year": {
+                            "input": "select",
+                            "options": [2000, 2005, 2010, 2015, 2018]
+                        }
+                    }
+                }
+            },
             "layer": [
                 {
-                    "transform": [
-                        {
-                            "calculate": "'Data is not available in ' + datum.properties.NAME",
-                            "as": "note"
-                        }
-                    ],
-                    "mark": { "type": "geoshape", "fill": "lightgray", "stroke": "white" },
-                    "encoding": { "tooltip": { "field": "note", "type": "nominal" } }
-                },
-                {
-                    "data": {
-                        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
-                        "format": { "type": "topojson", "feature": "oceans" }
-                    },
-                    "mark": { "type": "geoshape", "fill": "skyblue" }
-                },
-                {
-                    "data": {
-                        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
-                        "format": { "type": "topojson", "feature": "ne_110m_graticules_30" }
-                    },
-                    "mark": { "type": "geoshape", "fill": null, "stroke": "lightgray" }
+                    // ... The rest of your layers here
                 },
                 {
                     "transform": [
@@ -49,33 +41,17 @@
                             "lookup": "properties.NAME",
                             "from": {
                                 "data": {
-                                    "url": "https://raw.githubusercontent.com/Chuandie/Week9-homework/main/data/total-alcohol-consumption-per-capita-litres-of-pure-alcohol%20(2).csv?token=GHSAT0AAAAAACGJ75AJIID4CJSZ2IB5WZBMZINCLXA"
+                                    "url": "https://raw.githubusercontent.com/Chuandie/Week9-homework/main/data/total-alcohol-consumption-per-capita-litres-of-pure-alcohol%20(2).csv"
                                 },
                                 "key": "Entity",
                                 "fields": ["Year", "Alcohol consumption per capita (liters of pure alcohol, projected estimates, 15+ years of age)"]
                             }
                         },
                         {
-                            "filter": "datum.Year == 2018"
+                            "filter": { "selection": "chooseYear" }
                         }
                     ],
-                    "mark": { "type": "geoshape", "stroke": "white" },
-                    "encoding": {
-                        "color": {
-                            "field": "Alcohol consumption per capita (liters of pure alcohol, projected estimates, 15+ years of age)",
-                            "type": "quantitative",
-                            "title": "Litres of Pure Alcohol"
-                        },
-                        "tooltip": [
-                            { "field": "properties.NAME", "type": "nominal", "title": "Country" },
-                            { "field": "Year", "type": "ordinal" },
-                            {
-                                "field": "Alcohol consumption per capita (liters of pure alcohol, projected estimates, 15+ years of age)",
-                                "type": "quantitative",
-                                "title": "Alcohol Consumption (Litres)"
-                            }
-                        ]
-                    }
+                    // ... The rest of your mark and encoding for this layer
                 }
             ],
             "config": {}
