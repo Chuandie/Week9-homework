@@ -1,4 +1,4 @@
-Entity,Year,"Total alcohol consumption per capita (liters of pure alcohol, projected estimates, 15+ years of age)"
+Entity,Year,Alcohol consumption
 Afghanistan,2010,0.21
 Afghanistan,2015,0.21
 Afghanistan,2018,0.21
@@ -973,11 +973,6 @@ Vietnam,2005,2.63
 Vietnam,2010,4.9
 Vietnam,2015,7.86
 Vietnam,2018,8.66
-World,2000,5.476371
-World,2005,5.4132595
-World,2010,6.2632565
-World,2015,6.2851796
-World,2018,6.170357
 Yemen,2000,0.79
 Yemen,2005,0.34
 Yemen,2010,0.18
