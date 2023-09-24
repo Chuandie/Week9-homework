@@ -155,11 +155,11 @@ Cape Verde,2005,6.95
 Cape Verde,2010,7.51
 Cape Verde,2015,5.95
 Cape Verde,2018,5.6
-Central African Republic,2000,3.68
-Central African Republic,2005,3.62
-Central African Republic,2010,3.98
-Central African Republic,2015,2.43
-Central African Republic,2018,2.38
+Central African Rep.,2000,3.68
+Central African Rep.,2005,3.62
+Central African Rep.,2010,3.98
+Central African Rep.,2015,2.43
+Central African Rep.,2018,2.38
 Chad,2000,4.34
 Chad,2005,4.62
 Chad,2010,6.58
@@ -811,11 +811,11 @@ Solomon Islands,2005,1.6
 Solomon Islands,2010,1.6
 Solomon Islands,2015,1.55
 Solomon Islands,2018,1.83
-Somalia,2000,0
-Somalia,2005,0.068
-Somalia,2010,0.28
-Somalia,2015,0.013
-Somalia,2018,0.009
+Somaliland,2000,0
+Somaliland,2005,0.068
+Somaliland,2010,0.28
+Somaliland,2015,0.013
+Somaliland,2018,0.009
 South Africa,2000,10.02
 South Africa,2005,9.58
 South Africa,2010,10.04
@@ -846,8 +846,8 @@ Sub-Saharan Africa (WB),2005,6.107132
 Sub-Saharan Africa (WB),2010,6.285612
 Sub-Saharan Africa (WB),2015,5.8773804
 Sub-Saharan Africa (WB),2018,5.834015
-Sudan,2015,0.52
-Sudan,2018,0.51
+S. Sudan,2015,0.52
+S. Sudan,2018,0.51
 Suriname,2000,5.29
 Suriname,2005,5.41
 Suriname,2010,6.22
